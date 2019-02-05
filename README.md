@@ -23,3 +23,5 @@ If any package is missing in this installation which is required in the project,
 5. Now move inside the project folder and run the following command: python app.py
 
 Now the project will be running on localhost port 5000. Browse to http://127.0.0.1:5000/ and enjoy!
+
+**Note: The code has been tested for Windows Platform.**
