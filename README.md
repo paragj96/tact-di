@@ -1,6 +1,6 @@
 # tact-di
 Automatic Creation of Tactile Diagrams
-1. Download the project archive “tact-di.zip” and unzip it to your preferred location.
+1. Clone the repo to your preferred location.
 
 2. Make sure you have a working installation of Python 2.7. If not you can install Python from the following link: https://www.python.org/download/releases/2.7.2/
 
