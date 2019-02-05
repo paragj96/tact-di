@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tact-Di</title>
+	<link rel="stylesheet" type="text/css" href="../static/node_modules/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../static/style.css">
+
+	<script type="text/javascript" src="../static/node_modules/jquery/dist/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script type="text/javascript" src="../static/node_modules/bootstrap/js/modal.js"></script>
+	<script type="text/javascript" src="https://dme0ih8comzn4.cloudfront.net/imaging/v3/editor.js"></script>
+	<script type="text/javascript" src="../static/js/config.js"></script>
+	<script type="text/javascript" src="../static/js/index.js"></script>
+	
+</head>
+<body class="container" style="background-color:#0f586c;">
+
+	<div class="row">
+        <div class="col-md-1"></div>
+		<div class="col-md-10 text-center" >
+			<img src="../static/Tact-di-home-logo.png">
+            <br><br>
+		</div>
+        <br>
+        <br>
+        <div class="col-md-1" style="position:absolute;top:10px;right: 10px;">
+            <a id="about-this-demo-button" class="btn btn-link btn-block " data-toggle="modal" data-target="#more-info-modal"  style="color:white;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Help?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+        </div>
+	</div>
+
+
+<form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+<div class="col-md-12">
+			<input id="click-upload" type="file" name="file" accept="image/*">
+            <input type="hidden" id="edited-image" name="edited-image" value="test">
+			<div id="drop-area" >
+				<p>Drop an image here!</p>
+				<p>(or click to upload)</p>
+			</div>
+			<img id="editable-image" class="img-responsive center-block" style="align-items: center" >
+	<br>
+	<br>
+		</div>
+
+	
+<div class="row" >
+		<div class="col-md-3 text-center" >
+			</div>
+			<div class="col-md-3 text-center" >
+				<button id="edit-image-button" class="btn btn-primary btn-block btn-lg " type="button">
+					<span class="glyphicon glyphicon-pencil pull-left padleft" aria-hidden="true"></span> Edit
+				</button>
+			</div>
+			<div class="col-md-3 text-center" >
+				<button id="download-image-button" class="btn btn-success btn-block btn-lg " type="button">
+					<span class="glyphicon glyphicon-save pull-left padleft" aria-hidden="true"></span> Download
+				</button>
+			</div>
+		</div>
+		&nbsp;
+
+		<div class="row">
+				<div class="col-md-3 text-center" >
+					</div>
+			<div class="col-md-3 text-center" >
+				<button id="reset-image-button" class="btn btn-warning btn-block btn-lg" type="button">
+					<span class="glyphicon glyphicon-repeat pull-left padleft" aria-hidden="true"></span> Reset
+				</button>
+			</div>
+			<div class="col-md-3 text-center" >
+				<button id="clear-image-button" class="btn btn-danger btn-block btn-lg" type="button">
+					<span class="glyphicon glyphicon-remove pull-left padleft" aria-hidden="true"></span> Clear
+				</button>
+			</div>
+
+			<br>
+			
+			
+		</div>
+    <br>
+    <br>
+
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <input type="submit" value="Next Step --> Choose Model" id="upload-button"  class="btn btn-success btn-block btn-lg">
+    </div>
+</form>
+
+
+
+	<div id="more-info-modal" class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+	    	<div class="modal-content">
+	      		
+	      		<div class="modal-header">
+	        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        		<h4 class="modal-title">Help</h4>
+	      		</div>
+
+	      		<div class="modal-body">
+	        		<h3>Welcome to Tact-Di</h3>
+					<p>This is a web application for edting and converting image to tactile format.</p>
+					
+					<h3>Steps:</h3>
+					<p>
+						<ol>
+							<li>Upload Image</li>
+							<li>Edit Image</li>
+							<li>Select Model</li>
+							<li>Convert Image to STL</li>
+							<li>Download STL File</li>
+						</ol>
+					</p>
+
+					<h3>Contributors</h3>
+					<!--<p>Our thanks to </p> -->
+
+					<ul>
+						<li><a href="https://github.com/paragj96">Parag Jain</a></li>
+						<li><a href="https://github.com/bhakti21mantri">Bhakti Mantri</a></li>
+					</ul>
+
+					
+	      		</div>
+
+	      		<div class="modal-footer">
+	        		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		    	</div>
+
+	    	</div><!-- /.modal-content -->
+	  	</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+</body>
+</html>
