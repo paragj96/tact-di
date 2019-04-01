@@ -1,5 +1,8 @@
-from Tkinter import *
-import tkFileDialog
+import tkinter 
+#from Tkinter import *
+from tkinter import filedialog
+from tkinter import *
+#import tkFileDialog
 import file_paths as file
 import color_conversion_utils as color_converter
 import image_properties as prop
