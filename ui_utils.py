@@ -51,7 +51,7 @@ def assign_height_to_colors(distinct_colors):
 def browse_image():
     root = Tk()
     def browsefunc():
-        filename = tkFileDialog.askopenfilename(initialdir="/", title="Select file")
+        filename = filedialog.askopenfilename(initialdir="/", title="Select file")
         pathlabel.config(text=filename)
         file.set_image_path(filename)
         root.destroy()
